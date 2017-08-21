@@ -1,0 +1,31 @@
+{
+  "name": "codelight-eu/woocommerce-lhv-hire-purchase",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "description": "WordPress and WooCommerce plugin for LHV Bank hire-purchase payment gateway",
+  "homepage": "https://www.lhv.ee/en/hire-purchase",
+  "authors": [
+    {
+      "name": "Indrek Kõnnussaar",
+      "email": "indrek@codelight.eu",
+      "homepage": "https://codelight.eu/"
+    }
+  ],
+  "keywords": [
+    "wordpress",
+    "woocommerce",
+    "lhv"
+  ],
+  "support": {
+    "issues": "https://github.com/codelight-eu/woocommerce-lhv-hire-purchase/issues"
+  },
+  "autoload": {
+    "psr-4": {
+      "Codelight\\LHV\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.6.4",
+    "composer/installers": "~1.0"
+  }
+}

@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Codelight
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce LHV hire-purchase 1.0\n"
+"Report-Msgid-Bugs-To: lhv@codelight.eu\n"
+"POT-Creation-Date: 2017-08-15 18:57+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: WC_Gateway_LHV_Hire_Purchase.php:57
+msgid "LHV hire-purchase"
+msgstr ""
+
+#: WC_Gateway_LHV_Hire_Purchase.php:65
+msgid ""
+"Payment with LHV hire-purchase takes only a few minutes. Quick response to "
+"your application, affordable interest, down-payment from 0 euros. Premature "
+"payment free of charge."
+msgstr ""
+
+#: src/GatewayManager.php:117
+#, php-format
+msgid ""
+"To enable LHV hire-purchase payment gateway, please go to %ssettings%s and "
+"fill in the following fields:"
+msgstr ""
+
+#: src/GatewayManager.php:243 src/GatewayManager.php:261
+msgid "Pending manual signature"
+msgstr ""
+
+#: src/GatewayManager.php:304
+msgid "Settings"
+msgstr ""
+
+#: src/GatewayManager.php:305
+msgid "Documentation"
+msgstr ""
+
+#: src/GatewayManager.php:306
+msgid "Support"
+msgstr ""
+
+#: src/WooCommerceOrderHandler.php:142
+msgid "Shipping"
+msgstr ""
+
+#: src/WooCommerceOrderHandler.php:239
+msgid ""
+"Unfortunately it's currently only possible to sign contracts digitally. "
+"Please sign the contract digitally, choose another payment method or contact "
+"support."
+msgstr ""
+
+#: src/WooCommerceOrderHandler.php:261
+msgid ""
+"Sorry, it appears that LHV refused the contract. Please choose another "
+"payment method or contact support."
+msgstr ""
+
+#: src/WooCommerceOrderHandler.php:279
+msgid ""
+"We were unable to process the order using LHV hire-purchase due to a "
+"technical error. Please contact the store support or use a different payment "
+"method."
+msgstr ""
+
+#: src/woocommerce-settings.php:12
+msgid "Enable LHV hire-purchase"
+msgstr ""
+
+#: src/woocommerce-settings.php:14
+msgid "Enable LHV hire-purchase payment gateway"
+msgstr ""
+
+#: src/woocommerce-settings.php:18
+msgid "LHV test mode"
+msgstr ""
+
+#: src/woocommerce-settings.php:20
+msgid "Enable LHV test mode"
+msgstr ""
+
+#: src/woocommerce-settings.php:21
+msgid ""
+"If this is checked, LHV hire-purchase will run in test mode. Real payments "
+"will not be made."
+msgstr ""
+
+#: src/woocommerce-settings.php:26
+msgid "Website test mode"
+msgstr ""
+
+#: src/woocommerce-settings.php:28
+msgid "Enable website test mode"
+msgstr ""
+
+#: src/woocommerce-settings.php:29
+msgid ""
+"If this is checked, LHV hire-purchase will only be visible to users with "
+"Administrator role. Use this if you want to test the gateway in production "
+"without customers being able to see it."
+msgstr ""
+
+#: src/woocommerce-settings.php:34
+msgid "Title"
+msgstr ""
+
+#: src/woocommerce-settings.php:36
+msgid ""
+"This controls the payment gateway title which the user sees during checkout."
+msgstr ""
+
+#: src/woocommerce-settings.php:41
+msgid "Description"
+msgstr ""
+
+#: src/woocommerce-settings.php:43
+msgid ""
+"This controls the payment gateway description which the user sees during "
+"checkout."
+msgstr ""
+
+#: src/woocommerce-settings.php:48
+msgid "Manual signature"
+msgstr ""
+
+#: src/woocommerce-settings.php:50
+msgid ""
+"Allow manual signature for customers who cannot sign contracts digitally"
+msgstr ""
+
+#: src/woocommerce-settings.php:51
+msgid ""
+"If this is checked, users who cannot sign contracts digitally will be able "
+"to purchase using this gateway. However, you will need to sign the contract "
+"with them manually."
+msgstr ""
+
+#: src/woocommerce-settings.php:56
+msgid "Manual signature order confirmation message"
+msgstr ""
+
+#: src/woocommerce-settings.php:58
+msgid ""
+"This message is shown after a successful order if the customer wishes to "
+"manually sign the contract."
+msgstr ""
+
+#: src/woocommerce-settings.php:59
+msgid ""
+"Thank you for your purchase! We will contact you soon to sign the contract."
+msgstr ""
+
+#: src/woocommerce-settings.php:63
+msgid "Merchant ID (VK_SND_ID)"
+msgstr ""
+
+#: src/woocommerce-settings.php:66
+#, php-format
+msgid ""
+"Your merchant ID should be provided by LHV Bank. If you do not know your "
+"merchant ID, please contact LHV by email: %s or by phone: %s."
+msgstr ""
+
+#: src/woocommerce-settings.php:74
+msgid "Your private key"
+msgstr ""
+
+#: src/woocommerce-settings.php:76
+msgid ""
+"To sign the contract with LHV, you generated a keypair with a public and "
+"private key. You sent the public key to LHV. Enter the matching private key "
+"here."
+msgstr ""
+
+#: src/woocommerce-settings.php:81
+msgid "Your private key password"
+msgstr ""
+
+#: src/woocommerce-settings.php:83
+msgid ""
+"If you private key was password-protected, enter the password here. If you "
+"are not sure, just leave this blank."
+msgstr ""
+
+#: src/woocommerce-settings.php:88
+msgid "LHV public key"
+msgstr ""
+
+#: src/woocommerce-settings.php:90
+msgid "LHV bank's public key. You probably do not need to change this."
+msgstr ""
+
+#: templates/admin-support.php:15
+msgid ""
+"Having trouble? Check out the documentation or get in touch - our support is "
+"happy to help!"
+msgstr ""
+
+#: templates/admin-support.php:19
+msgid "Read the docs"
+msgstr ""
+
+#: templates/admin-support.php:22
+msgid "Contact support"
+msgstr ""
+
+#: woocommerce-lhv-hire-purchase.php:25
+msgid ""
+"You are running the development version of LHV hire-purchase which requires "
+"you to run 'composer install'"
+msgstr ""
+
+#: woocommerce-lhv-hire-purchase.php:31
+msgid ""
+"WooCommerce is not installed or activated. You'll need to install and "
+"activate WooCommerce to use LHV hire-purchase gateway."
+msgstr ""
+
+#: woocommerce-lhv-hire-purchase.php:37
+msgid ""
+"LHV hire-purchase gateway requires WooCommerce 3.0.0 or newer. Please update "
+"your WooCommerce installation and try again. Make sure you have a backup, "
+"though!"
+msgstr ""
