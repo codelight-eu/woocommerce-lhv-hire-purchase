@@ -1,6 +1,10 @@
+# Development
+ruleset.xml
+.editorconfig
+composer.lock
+
 # Composer
 composer.phar
-/vendor/
 
 # Numerous always-ignore extensions
 *.diff
