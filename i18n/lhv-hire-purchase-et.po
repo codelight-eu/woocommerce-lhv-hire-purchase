@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce LHV hire-purchase 1.0\n"
 "Report-Msgid-Bugs-To: lhv@codelight.eu\n"
-"POT-Creation-Date: 2017-08-15 18:57+0300\n"
-"PO-Revision-Date: 2017-08-15 18:58+0300\n"
+"POT-Creation-Date: 2017-08-29 12:21+0300\n"
+"PO-Revision-Date: 2017-08-29 12:21+0300\n"
 "Last-Translator: Codelight <team@codelight.eu>\n"
 "Language-Team: lhv@codelight.eu\n"
 "Language: et\n"
@@ -31,7 +31,7 @@ msgstr ""
 "soodne intress, sissemakse alates 0€. Kui soovid, tagasta kogu summa tasuta "
 "enne tähtaega."
 
-#: src/GatewayManager.php:117
+#: src/GatewayManager.php:114
 #, php-format
 msgid ""
 "To enable LHV hire-purchase payment gateway, please go to %ssettings%s and "
@@ -40,19 +40,15 @@ msgstr ""
 "LHV järelmaksumooduli sisse lülitamiseks mine palun %sseadete lehele%s ja "
 "täida ära järgnevad väljad:"
 
-#: src/GatewayManager.php:243 src/GatewayManager.php:261
-msgid "Pending manual signature"
-msgstr "Allkirjastamine kaupmehe juures"
-
-#: src/GatewayManager.php:304
+#: src/GatewayManager.php:272
 msgid "Settings"
 msgstr "Seaded"
 
-#: src/GatewayManager.php:305
+#: src/GatewayManager.php:273
 msgid "Documentation"
 msgstr "Dokumentatsioon"
 
-#: src/GatewayManager.php:306
+#: src/GatewayManager.php:274
 msgid "Support"
 msgstr "Klienditugi"
 
@@ -60,25 +56,15 @@ msgstr "Klienditugi"
 msgid "Shipping"
 msgstr "Tarne"
 
-#: src/WooCommerceOrderHandler.php:239
+#: src/WooCommerceOrderHandler.php:209
 msgid ""
-"Unfortunately it's currently only possible to sign contracts digitally. "
-"Please sign the contract digitally, choose another payment method or contact "
-"support."
+"Sorry, it appears that AS LHV Finance refused the contract. Please choose "
+"another payment method or contact support."
 msgstr ""
-"Vabandame, aga hetkel on võimalik lepinguid ainult digiallkirjastada. Palun "
-"allkirjastage leping digitaalselt, valige teine maksemeetod või võtke "
-"ühendust klienditoega."
+"Kahjuks keeldus AS LHV Finance järelmaksulepingust. Tellimuse sooritamiseks "
+"vali mõni teine maksemeetod või võta ühendust klienditoega."
 
-#: src/WooCommerceOrderHandler.php:261
-msgid ""
-"Sorry, it appears that LHV refused the contract. Please choose another "
-"payment method or contact support."
-msgstr ""
-"Kahjuks keeldus LHV järelmaksulepingust. Tellimuse sooritamiseks vali mõni "
-"teine maksemeetod või võta ühendust klienditoega."
-
-#: src/WooCommerceOrderHandler.php:279
+#: src/WooCommerceOrderHandler.php:227
 msgid ""
 "We were unable to process the order using LHV hire-purchase due to a "
 "technical error. Please contact the store support or use a different payment "
@@ -89,19 +75,19 @@ msgstr ""
 
 #: src/woocommerce-settings.php:12
 msgid "Enable LHV hire-purchase"
-msgstr "Lülita LHV järelmaks sisse"
+msgstr "Lülita LHV järelmaksumoodul sisse"
 
 #: src/woocommerce-settings.php:14
 msgid "Enable LHV hire-purchase payment gateway"
 msgstr "Lülita LHV järelmaksumoodul sisse"
 
 #: src/woocommerce-settings.php:18
-msgid "LHV test mode"
-msgstr "LHV testrežiim"
+msgid "LHV hire-purchase test mode"
+msgstr "LHV järelmaksumooduli testrežiim"
 
 #: src/woocommerce-settings.php:20
-msgid "Enable LHV test mode"
-msgstr "Lülita LHV testrežiim sisse"
+msgid "Enable LHV hire-purchase test mode"
+msgstr "Lülita LHV järelmaksumooduli testrežiim sisse"
 
 #: src/woocommerce-settings.php:21
 msgid ""
@@ -149,77 +135,39 @@ msgid ""
 msgstr "Maksemeetodi kirjeldus, mida klient kassas näeb."
 
 #: src/woocommerce-settings.php:48
-msgid "Manual signature"
-msgstr "Allkirjastamine kaupmehe juures"
-
-#: src/woocommerce-settings.php:50
-msgid ""
-"Allow manual signature for customers who cannot sign contracts digitally"
-msgstr ""
-"Võimalda kaupmehe juures allkirjastamine klientidele, kellel pole võimalik "
-"digitaalset allkirja anda"
-
-#: src/woocommerce-settings.php:51
-msgid ""
-"If this is checked, users who cannot sign contracts digitally will be able "
-"to purchase using this gateway. However, you will need to sign the contract "
-"with them manually."
-msgstr ""
-"Kui allkirjastamine kaupmehe juures on lubatud saavad LHV järelmaksuga "
-"tellimuse esitada ka kliendid kellel pole võimalik digiallkirja anda. "
-"Kaupmees peab sellisel juhul nendega füüsilise lepingu allkirjastama."
-
-#: src/woocommerce-settings.php:56
-msgid "Manual signature order confirmation message"
-msgstr "Kaupmehe juures allkirjastamise kinnitusteade"
-
-#: src/woocommerce-settings.php:58
-msgid ""
-"This message is shown after a successful order if the customer wishes to "
-"manually sign the contract."
-msgstr ""
-"Seda sõnumit kuvatakse klientidele kes valivad kaupmehe juures "
-"allkirjastamise pärast edukalt tellimuse esitamist."
-
-#: src/woocommerce-settings.php:59
-msgid ""
-"Thank you for your purchase! We will contact you soon to sign the contract."
-msgstr ""
-"Täname ostu eest! Võtame teiega varsti ühendust, et leping allkirjastada."
-
-#: src/woocommerce-settings.php:63
 msgid "Merchant ID (VK_SND_ID)"
 msgstr "Kaupmehe ID (VK_SND_ID)"
 
-#: src/woocommerce-settings.php:66
+#: src/woocommerce-settings.php:51
 #, php-format
 msgid ""
-"Your merchant ID should be provided by LHV Bank. If you do not know your "
-"merchant ID, please contact LHV by email: %s or by phone: %s."
+"Your merchant ID should be provided by AS LHV Finance customer support. If "
+"you do not know your merchant ID, please contact LHV by email: %s or by "
+"phone: %s."
 msgstr ""
-"Sinu kaupmehe ID anti sulle lepingu allkirjastamise käigus LHV klienditoe "
-"poolt. Kui sa oma kaupmehe ID-d ei tea, siis võta ühendust klienditoega "
-"emaili teel: %s või telefoni teel: %s."
+"Sinu kaupmehe ID anti sulle lepingu allkirjastamise käigus AS LHV Finance "
+"klienditoe poolt. Kui sa oma kaupmehe ID-d ei tea, siis võta ühendust "
+"klienditoega e-maili teel: %s või telefoni teel: %s."
 
-#: src/woocommerce-settings.php:74
+#: src/woocommerce-settings.php:59
 msgid "Your private key"
 msgstr "Sinu privaatvõti"
 
-#: src/woocommerce-settings.php:76
+#: src/woocommerce-settings.php:61
 msgid ""
-"To sign the contract with LHV, you generated a keypair with a public and "
-"private key. You sent the public key to LHV. Enter the matching private key "
-"here."
+"To sign the contract with AS LHV Finance, you generated a keypair with a "
+"public and private key. You sent the public key to AS LHV Finance. Enter the "
+"matching private key here."
 msgstr ""
-"LHV-ga lepingu allkirjastamiseks oli vaja genereerida võtmepaar avaliku- ja "
-"privaatvõtmega. Avalik võti tuli saata LHV pangale. Sisesta siia avalikule "
-"võtmele vastav privaatvõti."
+"AS LHV Finance-ga lepingu allkirjastamiseks oli vaja genereerida võtmepaar "
+"avaliku- ja privaatvõtmega. Avalik võti tuli saata AS LHV Finance-le. "
+"Sisesta siia sellele avalikule võtmele vastav privaatvõti."
 
-#: src/woocommerce-settings.php:81
+#: src/woocommerce-settings.php:66
 msgid "Your private key password"
 msgstr "Privaatvõtme parool"
 
-#: src/woocommerce-settings.php:83
+#: src/woocommerce-settings.php:68
 msgid ""
 "If you private key was password-protected, enter the password here. If you "
 "are not sure, just leave this blank."
@@ -227,13 +175,13 @@ msgstr ""
 "Kui su privaatvõti on parooliga kaitstud, sisesta parool siia. Kui sa pole "
 "kindel, siis jäta see väli lihtsalt tühjaks."
 
-#: src/woocommerce-settings.php:88
+#: src/woocommerce-settings.php:73
 msgid "LHV public key"
 msgstr "LHV avalik võti"
 
-#: src/woocommerce-settings.php:90
-msgid "LHV bank's public key. You probably do not need to change this."
-msgstr "LHV panga avalik võti. Tõenäoliselt ei ole vaja seda muuta."
+#: src/woocommerce-settings.php:75
+msgid "AS LHV Finance public key. You probably do not need to change this."
+msgstr "AS LHV Finance avalik võti. Tõenäoliselt ei ole vaja seda muuta."
 
 #: templates/admin-support.php:15
 msgid ""
@@ -251,7 +199,7 @@ msgstr "Dokumentatsioon"
 msgid "Contact support"
 msgstr "Klienditugi"
 
-#: woocommerce-lhv-hire-purchase.php:25
+#: woocommerce-lhv-hire-purchase.php:27
 msgid ""
 "You are running the development version of LHV hire-purchase which requires "
 "you to run 'composer install'"
@@ -259,7 +207,7 @@ msgstr ""
 "LHV järelmaksumooduli arendusversioon vajab käsu 'composer install' "
 "jooksutamist"
 
-#: woocommerce-lhv-hire-purchase.php:31
+#: woocommerce-lhv-hire-purchase.php:33
 msgid ""
 "WooCommerce is not installed or activated. You'll need to install and "
 "activate WooCommerce to use LHV hire-purchase gateway."
@@ -267,7 +215,7 @@ msgstr ""
 "WooCommerce ei ole paigaldatud või aktiveeritud. LHV järelmaksumooduli "
 "aktiveerimiseks on vaja WooCommerce paigaldada ja aktiveerida."
 
-#: woocommerce-lhv-hire-purchase.php:37
+#: woocommerce-lhv-hire-purchase.php:39
 msgid ""
 "LHV hire-purchase gateway requires WooCommerce 3.0.0 or newer. Please update "
 "your WooCommerce installation and try again. Make sure you have a backup, "
@@ -276,6 +224,58 @@ msgstr ""
 "LHV järelmaksumoodul vajab WooCommerce versiooni 3.0.0 või uuemat. Palun "
 "uuenda oma WooCommerce'i pluginat ja proovi uuesti. Enne uuendust tee "
 "kindlasti lehest varukoopia!"
+
+#~ msgid "LHV test mode"
+#~ msgstr "LHV testrežiim"
+
+#~ msgid "Enable LHV test mode"
+#~ msgstr "Lülita LHV testrežiim sisse"
+
+#~ msgid "Pending manual signature"
+#~ msgstr "Allkirjastamine kaupmehe juures"
+
+#~ msgid ""
+#~ "Unfortunately it's currently only possible to sign contracts digitally. "
+#~ "Please sign the contract digitally, choose another payment method or "
+#~ "contact support."
+#~ msgstr ""
+#~ "Vabandame, aga hetkel on võimalik lepinguid ainult digiallkirjastada. "
+#~ "Palun allkirjastage leping digitaalselt, valige teine maksemeetod või "
+#~ "võtke ühendust klienditoega."
+
+#~ msgid "Manual signature"
+#~ msgstr "Allkirjastamine kaupmehe juures"
+
+#~ msgid ""
+#~ "Allow manual signature for customers who cannot sign contracts digitally"
+#~ msgstr ""
+#~ "Võimalda kaupmehe juures allkirjastamine klientidele, kellel pole "
+#~ "võimalik digitaalset allkirja anda"
+
+#~ msgid ""
+#~ "If this is checked, users who cannot sign contracts digitally will be "
+#~ "able to purchase using this gateway. However, you will need to sign the "
+#~ "contract with them manually."
+#~ msgstr ""
+#~ "Kui allkirjastamine kaupmehe juures on lubatud saavad LHV järelmaksuga "
+#~ "tellimuse esitada ka kliendid kellel pole võimalik digiallkirja anda. "
+#~ "Kaupmees peab sellisel juhul nendega füüsilise lepingu allkirjastama."
+
+#~ msgid "Manual signature order confirmation message"
+#~ msgstr "Kaupmehe juures allkirjastamise kinnitusteade"
+
+#~ msgid ""
+#~ "This message is shown after a successful order if the customer wishes to "
+#~ "manually sign the contract."
+#~ msgstr ""
+#~ "Seda sõnumit kuvatakse klientidele kes valivad kaupmehe juures "
+#~ "allkirjastamise pärast edukalt tellimuse esitamist."
+
+#~ msgid ""
+#~ "Thank you for your purchase! We will contact you soon to sign the "
+#~ "contract."
+#~ msgstr ""
+#~ "Täname ostu eest! Võtame teiega varsti ühendust, et leping allkirjastada."
 
 #~ msgid ""
 #~ "LHV hire-purchase makes it possible to pay for goods or services in "

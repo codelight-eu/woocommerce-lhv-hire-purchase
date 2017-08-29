@@ -84,7 +84,8 @@ class Response
             case '5111':
                 return 'confirmed';
             case '5112':
-                return 'manual';
+                //return 'manual';
+                return false;
             case '5113':
                 return 'rejected';
             default:

@@ -54,12 +54,6 @@ class GatewayManager
      */
     protected function init()
     {
-        // Register custom order statuses
-        add_action('init', [$this, 'registerOrderStatuses']);
-
-        // Add custom statuses to list of WooCommerce order statuses
-        add_filter('wc_order_statuses', [$this, 'addOrderStatuses']);
-
         // Set up response handler
         add_action('template_redirect', [$this, 'handleResponse']);
 
@@ -235,35 +229,6 @@ class GatewayManager
     public function enqueueScripts()
     {
         wp_enqueue_script('lhv-hire-purchase', $this->getAssetUrl('js/checkout.js'), ['jquery']);
-    }
-
-    /**
-     * Register our custom order status
-     */
-    public function registerOrderStatuses()
-    {
-        register_post_status('wc-lhv-pending', [
-            'label'                     => __('Pending manual signature', 'lhv-hire-purchase'),
-            'public'                    => true,
-            'exclude_from_search'       => false,
-            'show_in_admin_all_list'    => true,
-            'show_in_admin_status_list' => true,
-            'label_count'               => _n_noop('Pending manual signature <span class="count">(%s)</span>',
-                'Pending manual signature <span class="count">(%s)</span>'),
-        ]);
-    }
-
-    /**
-     * Add our custom order status to the list of WooCommerce statuses
-     *
-     * @param $orderStatuses
-     * @return mixed
-     */
-    public function addOrderStatuses($orderStatuses)
-    {
-        $orderStatuses['wc-lhv-pending'] = __('Pending manual signature', 'lhv-hire-purchase');
-
-        return $orderStatuses;
     }
 
     /**
