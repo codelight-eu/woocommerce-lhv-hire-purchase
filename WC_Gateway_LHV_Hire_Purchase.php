@@ -102,8 +102,6 @@ class WC_Gateway_LHV_Hire_Purchase extends \WC_Payment_Gateway
             'enabled'                  => $this->get_option('enabled'),
             'testmode'                 => $this->get_option('testmode'),
             'testmode-admin'           => $this->get_option('testmode-admin'),
-            'allow-manual-signature'   => $this->get_option('allow-manual-signature'),
-            'manual-signature-message' => $this->get_option('manual-signature-message'),
             'merchant_id'              => $this->get_option('merchant_id'),
             'private_key'              => $this->get_option('private_key'),
             'private_key_pass'         => $this->get_option('private_key_pass'),

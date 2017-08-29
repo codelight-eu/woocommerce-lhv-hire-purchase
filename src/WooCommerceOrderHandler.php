@@ -165,17 +165,10 @@ class WooCommerceOrderHandler
         switch ($response->getStatus()) {
             case 'confirmed':
                 return $this->setOrderConfirmed($order, $gateway);
-            case 'manual':
-                if ('yes' === $this->settings['allow-manual-signature']) {
-                    return $this->setOrderPending($order, $gateway);
-                } else {
-                    return $this->setOrderRejectedByMerchant($order, $gateway);
-                }
             case 'rejected':
                 return $this->setOrderRejectedByBank($order, $gateway);
             default:
                 wc_get_logger()->error('Unknown status (VK_SERVICE) returned by LHV!', ['source' => 'lhv']);
-
                 return $this->error();
         }
     }
@@ -202,51 +195,6 @@ class WooCommerceOrderHandler
     }
 
     /**
-     * Mark order as pending manual signature and empty cart
-     *
-     * @param \WC_Order $order
-     * @param $gateway
-     * @return array
-     */
-    protected function setOrderPending(\WC_Order $order, $gateway)
-    {
-        do_action('lhv/hire-purchase/order-pending', $order);
-
-        $order->set_status('wc-lhv-pending');
-        $order->save();
-
-        WC()->cart->empty_cart();
-        wc_add_notice(apply_filters('lhv/hire-purchase/message-manual-signature', $this->settings['manual-signature-message'], $order));
-
-        return [
-            'result'   => 'success',
-            'redirect' => apply_filters('lhv/hire-purchase/redirect-pending', $gateway->get_return_url($order), $order),
-        ];
-    }
-
-    /**
-     * Merchant does not allow manual signature - display error and redirect user back to checkout
-     *
-     * @param \WC_Order $order
-     * @param $gateway
-     * @return array
-     */
-    protected function setOrderRejectedByMerchant(\WC_Order $order, $gateway)
-    {
-        do_action('lhv/hire-purchase/order-rejected-merchant', $order);
-
-        wc_add_notice(
-            apply_filters('lhv/hire-purchase/message-rejected-merchant', __('Unfortunately it\'s currently only possible to sign contracts digitally. Please sign the contract digitally, choose another payment method or contact support.', 'lhv-hire-purchase'), $order),
-            'error'
-        );
-
-        return [
-            'result'   => 'success',
-            'redirect' => apply_filters('lhv/hire-purchase/redirect-rejected', wc_get_checkout_url(), $order),
-        ];
-    }
-
-    /**
      * Bank rejected the order - display error and redirect user back to checkout
      *
      * @param \WC_Order $order
@@ -258,7 +206,7 @@ class WooCommerceOrderHandler
         do_action('lhv/hire-purchase/order-rejected-bank', $order);
 
         wc_add_notice(
-            apply_filters('lhv/hire-purchase/message-rejected-bank', __('Sorry, it appears that LHV refused the contract. Please choose another payment method or contact support.', 'lhv-hire-purchase'), $order),
+            apply_filters('lhv/hire-purchase/message-rejected-bank', __('Sorry, it appears that AS LHV Finance refused the contract. Please choose another payment method or contact support.', 'lhv-hire-purchase'), $order),
             'error'
         );
 

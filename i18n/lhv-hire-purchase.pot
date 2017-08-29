@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce LHV hire-purchase 1.0\n"
 "Report-Msgid-Bugs-To: lhv@codelight.eu\n"
-"POT-Creation-Date: 2017-08-15 18:57+0300\n"
+"POT-Creation-Date: 2017-08-29 12:21+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,26 +28,22 @@ msgid ""
 "payment free of charge."
 msgstr ""
 
-#: src/GatewayManager.php:117
+#: src/GatewayManager.php:114
 #, php-format
 msgid ""
 "To enable LHV hire-purchase payment gateway, please go to %ssettings%s and "
 "fill in the following fields:"
 msgstr ""
 
-#: src/GatewayManager.php:243 src/GatewayManager.php:261
-msgid "Pending manual signature"
-msgstr ""
-
-#: src/GatewayManager.php:304
+#: src/GatewayManager.php:272
 msgid "Settings"
 msgstr ""
 
-#: src/GatewayManager.php:305
+#: src/GatewayManager.php:273
 msgid "Documentation"
 msgstr ""
 
-#: src/GatewayManager.php:306
+#: src/GatewayManager.php:274
 msgid "Support"
 msgstr ""
 
@@ -55,20 +51,13 @@ msgstr ""
 msgid "Shipping"
 msgstr ""
 
-#: src/WooCommerceOrderHandler.php:239
+#: src/WooCommerceOrderHandler.php:209
 msgid ""
-"Unfortunately it's currently only possible to sign contracts digitally. "
-"Please sign the contract digitally, choose another payment method or contact "
-"support."
+"Sorry, it appears that AS LHV Finance refused the contract. Please choose "
+"another payment method or contact support."
 msgstr ""
 
-#: src/WooCommerceOrderHandler.php:261
-msgid ""
-"Sorry, it appears that LHV refused the contract. Please choose another "
-"payment method or contact support."
-msgstr ""
-
-#: src/WooCommerceOrderHandler.php:279
+#: src/WooCommerceOrderHandler.php:227
 msgid ""
 "We were unable to process the order using LHV hire-purchase due to a "
 "technical error. Please contact the store support or use a different payment "
@@ -84,11 +73,11 @@ msgid "Enable LHV hire-purchase payment gateway"
 msgstr ""
 
 #: src/woocommerce-settings.php:18
-msgid "LHV test mode"
+msgid "LHV hire-purchase test mode"
 msgstr ""
 
 #: src/woocommerce-settings.php:20
-msgid "Enable LHV test mode"
+msgid "Enable LHV hire-purchase test mode"
 msgstr ""
 
 #: src/woocommerce-settings.php:21
@@ -132,74 +121,44 @@ msgid ""
 msgstr ""
 
 #: src/woocommerce-settings.php:48
-msgid "Manual signature"
-msgstr ""
-
-#: src/woocommerce-settings.php:50
-msgid ""
-"Allow manual signature for customers who cannot sign contracts digitally"
-msgstr ""
-
-#: src/woocommerce-settings.php:51
-msgid ""
-"If this is checked, users who cannot sign contracts digitally will be able "
-"to purchase using this gateway. However, you will need to sign the contract "
-"with them manually."
-msgstr ""
-
-#: src/woocommerce-settings.php:56
-msgid "Manual signature order confirmation message"
-msgstr ""
-
-#: src/woocommerce-settings.php:58
-msgid ""
-"This message is shown after a successful order if the customer wishes to "
-"manually sign the contract."
-msgstr ""
-
-#: src/woocommerce-settings.php:59
-msgid ""
-"Thank you for your purchase! We will contact you soon to sign the contract."
-msgstr ""
-
-#: src/woocommerce-settings.php:63
 msgid "Merchant ID (VK_SND_ID)"
 msgstr ""
 
-#: src/woocommerce-settings.php:66
+#: src/woocommerce-settings.php:51
 #, php-format
 msgid ""
-"Your merchant ID should be provided by LHV Bank. If you do not know your "
-"merchant ID, please contact LHV by email: %s or by phone: %s."
+"Your merchant ID should be provided by AS LHV Finance customer support. If "
+"you do not know your merchant ID, please contact LHV by email: %s or by "
+"phone: %s."
 msgstr ""
 
-#: src/woocommerce-settings.php:74
+#: src/woocommerce-settings.php:59
 msgid "Your private key"
 msgstr ""
 
-#: src/woocommerce-settings.php:76
+#: src/woocommerce-settings.php:61
 msgid ""
-"To sign the contract with LHV, you generated a keypair with a public and "
-"private key. You sent the public key to LHV. Enter the matching private key "
-"here."
+"To sign the contract with AS LHV Finance, you generated a keypair with a "
+"public and private key. You sent the public key to AS LHV Finance. Enter the "
+"matching private key here."
 msgstr ""
 
-#: src/woocommerce-settings.php:81
+#: src/woocommerce-settings.php:66
 msgid "Your private key password"
 msgstr ""
 
-#: src/woocommerce-settings.php:83
+#: src/woocommerce-settings.php:68
 msgid ""
 "If you private key was password-protected, enter the password here. If you "
 "are not sure, just leave this blank."
 msgstr ""
 
-#: src/woocommerce-settings.php:88
+#: src/woocommerce-settings.php:73
 msgid "LHV public key"
 msgstr ""
 
-#: src/woocommerce-settings.php:90
-msgid "LHV bank's public key. You probably do not need to change this."
+#: src/woocommerce-settings.php:75
+msgid "AS LHV Finance public key. You probably do not need to change this."
 msgstr ""
 
 #: templates/admin-support.php:15
@@ -216,19 +175,19 @@ msgstr ""
 msgid "Contact support"
 msgstr ""
 
-#: woocommerce-lhv-hire-purchase.php:25
+#: woocommerce-lhv-hire-purchase.php:27
 msgid ""
 "You are running the development version of LHV hire-purchase which requires "
 "you to run 'composer install'"
 msgstr ""
 
-#: woocommerce-lhv-hire-purchase.php:31
+#: woocommerce-lhv-hire-purchase.php:33
 msgid ""
 "WooCommerce is not installed or activated. You'll need to install and "
 "activate WooCommerce to use LHV hire-purchase gateway."
 msgstr ""
 
-#: woocommerce-lhv-hire-purchase.php:37
+#: woocommerce-lhv-hire-purchase.php:39
 msgid ""
 "LHV hire-purchase gateway requires WooCommerce 3.0.0 or newer. Please update "
 "your WooCommerce installation and try again. Make sure you have a backup, "
