@@ -71,6 +71,13 @@ class GatewayManager
 
         // Add author note
         add_filter('admin_footer_text', [$this, 'showCredits']);
+
+        // Register custom order statuses
+        add_action('init', [$this, 'registerOrderStatuses']);
+
+        // Add custom statuses to list of WooCommerce order statuses
+        add_filter('wc_order_statuses', [$this, 'addOrderStatuses']);
+
     }
 
     /**
@@ -199,6 +206,34 @@ class GatewayManager
             wp_safe_redirect(apply_filters('lhv/hire-purchase/redirect-error', wc_get_checkout_url()));
             exit;
         }
+    }
+
+    /**
+     * Register our custom order status
+     */
+    public function registerOrderStatuses()
+    {
+        register_post_status('wc-lhv-pending', [
+            'label'                     => __('Pending LHV confirmation', 'lhv-hire-purchase'),
+            'public'                    => true,
+            'exclude_from_search'       => false,
+            'show_in_admin_all_list'    => true,
+            'show_in_admin_status_list' => true,
+            'label_count'               => _n_noop('Pending LHV confirmation <span class="count">(%s)</span>',
+                'Pending LHV confirmation <span class="count">(%s)</span>'),
+        ]);
+    }
+
+    /**
+     * Add our custom order status to the list of WooCommerce statuses
+     *
+     * @param $orderStatuses
+     * @return mixed
+     */
+    public function addOrderStatuses($orderStatuses)
+    {
+        $orderStatuses['wc-lhv-pending'] = __('Pending LHV confirmation', 'lhv-hire-purchase');
+        return $orderStatuses;
     }
 
     /**

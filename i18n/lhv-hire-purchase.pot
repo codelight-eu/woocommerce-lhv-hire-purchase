@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Codelight
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the WooCommerce LHV hire-purchase package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce LHV hire-purchase 1.0\n"
 "Report-Msgid-Bugs-To: lhv@codelight.eu\n"
-"POT-Creation-Date: 2017-08-29 12:21+0300\n"
+"POT-Creation-Date: 2017-11-14 14:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,22 +28,26 @@ msgid ""
 "payment free of charge."
 msgstr ""
 
-#: src/GatewayManager.php:114
+#: src/GatewayManager.php:121
 #, php-format
 msgid ""
 "To enable LHV hire-purchase payment gateway, please go to %ssettings%s and "
 "fill in the following fields:"
 msgstr ""
 
-#: src/GatewayManager.php:272
+#: src/GatewayManager.php:217 src/GatewayManager.php:235
+msgid "Pending LHV confirmation"
+msgstr ""
+
+#: src/GatewayManager.php:307
 msgid "Settings"
 msgstr ""
 
-#: src/GatewayManager.php:273
+#: src/GatewayManager.php:308
 msgid "Documentation"
 msgstr ""
 
-#: src/GatewayManager.php:274
+#: src/GatewayManager.php:309
 msgid "Support"
 msgstr ""
 
@@ -51,13 +55,17 @@ msgstr ""
 msgid "Shipping"
 msgstr ""
 
-#: src/WooCommerceOrderHandler.php:209
+#: src/WooCommerceOrderHandler.php:241
+msgid "You should receive an email from AS LHV Finance soon!"
+msgstr ""
+
+#: src/WooCommerceOrderHandler.php:261
 msgid ""
 "Sorry, it appears that AS LHV Finance refused the contract. Please choose "
 "another payment method or contact support."
 msgstr ""
 
-#: src/WooCommerceOrderHandler.php:227
+#: src/WooCommerceOrderHandler.php:279
 msgid ""
 "We were unable to process the order using LHV hire-purchase due to a "
 "technical error. Please contact the store support or use a different payment "
@@ -159,20 +167,6 @@ msgstr ""
 
 #: src/woocommerce-settings.php:75
 msgid "AS LHV Finance public key. You probably do not need to change this."
-msgstr ""
-
-#: templates/admin-support.php:15
-msgid ""
-"Having trouble? Check out the documentation or get in touch - our support is "
-"happy to help!"
-msgstr ""
-
-#: templates/admin-support.php:19
-msgid "Read the docs"
-msgstr ""
-
-#: templates/admin-support.php:22
-msgid "Contact support"
 msgstr ""
 
 #: woocommerce-lhv-hire-purchase.php:27
