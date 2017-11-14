@@ -59,7 +59,7 @@ class Response
             return $verify;
         }
 
-        wc_get_logger()->info("Empty VK_MAC: \n" . wc_print_r($this->data, true), ['source' => 'lhv']);
+        wc_get_logger()->info("There seems to be a technical error. Return data: \n" . wc_print_r($this->data, true), ['source' => 'lhv']);
         return false;
     }
 
@@ -91,6 +91,21 @@ class Response
             default:
                 return false;
         }
+    }
+
+    /**
+     * If a customer's application goes to manual check and they click on "Back to merchant" on LHV's webpage,
+     * LHV redirects the customer back to the VK_RETURN URL without any parameters whatsoever. This is an
+     * attempt to detect this situation.
+     * 
+     * @return boolean
+     */
+    public function isEmpty()
+    {
+        return 
+            count($this->data) === 1 && 
+            isset($this->data['lhv-hire-purchase-payment']) &&
+            $this->data['lhv-hire-purchase-payment'];
     }
 
     /**

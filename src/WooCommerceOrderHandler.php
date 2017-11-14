@@ -155,22 +155,50 @@ class WooCommerceOrderHandler
     public function handleResponse($request, $gateway)
     {
         $response = new Response($request);
+        
+        // If response contains the required data to validate it, then do so
+        if (!$response->isEmpty()) {
+            
+            if (!$response->validate($this->settings['public_key'])) {
+                return $this->error();
+            }
 
-        if (!$response->validate($this->settings['public_key'])) {
+            $order = wc_get_order($response->getOrderId());
+
+            if (!$order) {
+                wc_get_logger()->error("MAC validation was successful, but order {$response->getOrderId()} does not exist!", ['source' => 'lhv']);
+                return $this->error();
+            }
+
+            switch ($response->getStatus()) {
+                case 'confirmed':
+                    return $this->setOrderConfirmed($order, $gateway);
+                case 'rejected':
+                    return $this->setOrderRejectedByBank($order, $gateway);
+                default:
+                    wc_get_logger()->error('Unknown status (VK_SERVICE) returned by LHV!', ['source' => 'lhv']);
+                    return $this->error();
+            }
+
+        } else {
+            // If the response doesn't contain data, we hope it's a customer returning from LHV after his
+            // application is sent to manual check. 
+            // Alternatively, it's an error, but we can't really tell the difference.
+            $order = wc_get_order($_GET['lhv-hire-purchase-payment']);
+
+            if (!$order) {
+                wc_get_logger()->error("VK_RETURN seems to have returned to a non-existing order ID.", ['source' => 'lhv']);
+                return $this->error();
+            }
+
+            if ('pending' === $order->get_status()) {
+                return $this->setOrderPending($order, $gateway); 
+            }
+            
+            wc_get_logger()->error("There seems to be a duplicate call to VK_RETURN url. The order status is not 'pending', so no further modifications will be made.", ['source' => 'lhv']);
             return $this->error();
         }
-
-        $order = wc_get_order($response->getOrderId());
-
-        switch ($response->getStatus()) {
-            case 'confirmed':
-                return $this->setOrderConfirmed($order, $gateway);
-            case 'rejected':
-                return $this->setOrderRejectedByBank($order, $gateway);
-            default:
-                wc_get_logger()->error('Unknown status (VK_SERVICE) returned by LHV!', ['source' => 'lhv']);
-                return $this->error();
-        }
+        
     }
 
     /**
@@ -191,6 +219,30 @@ class WooCommerceOrderHandler
         return [
             'result'   => 'success',
             'redirect' => apply_filters('lhv/hire-purchase/redirect-success', $gateway->get_return_url($order), $order),
+        ];
+    }
+
+    /**
+     * Mark order as pending confirmation from LHV and empty cart
+     *
+     * @param \WC_Order $order
+     * @param $gateway
+     * @return array
+     */
+    protected function setOrderPending(\WC_Order $order, $gateway)
+    {
+        do_action('lhv/hire-purchase/order-pending', $order);
+
+        $order->set_status('wc-lhv-pending');
+        $order->save();
+        
+        WC()->cart->empty_cart();
+        wc_add_notice(
+            apply_filters('lhv/hire-purchase/message-pending', __('You should receive an email from AS LHV Finance soon!', 'lhv-hire-purchase'), $order));
+        
+        return [
+            'result'   => 'success',
+            'redirect' => apply_filters('lhv/hire-purchase/redirect-pending', $gateway->get_return_url($order), $order),
         ];
     }
 

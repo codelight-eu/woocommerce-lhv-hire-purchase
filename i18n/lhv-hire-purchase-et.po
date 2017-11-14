@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce LHV hire-purchase 1.0\n"
 "Report-Msgid-Bugs-To: lhv@codelight.eu\n"
-"POT-Creation-Date: 2017-08-29 12:21+0300\n"
-"PO-Revision-Date: 2017-08-29 12:21+0300\n"
+"POT-Creation-Date: 2017-11-14 14:03+0200\n"
+"PO-Revision-Date: 2017-11-14 14:04+0200\n"
 "Last-Translator: Codelight <team@codelight.eu>\n"
 "Language-Team: lhv@codelight.eu\n"
 "Language: et\n"
@@ -31,7 +31,7 @@ msgstr ""
 "soodne intress, sissemakse alates 0€. Kui soovid, tagasta kogu summa tasuta "
 "enne tähtaega."
 
-#: src/GatewayManager.php:114
+#: src/GatewayManager.php:121
 #, php-format
 msgid ""
 "To enable LHV hire-purchase payment gateway, please go to %ssettings%s and "
@@ -40,15 +40,19 @@ msgstr ""
 "LHV järelmaksumooduli sisse lülitamiseks mine palun %sseadete lehele%s ja "
 "täida ära järgnevad väljad:"
 
-#: src/GatewayManager.php:272
+#: src/GatewayManager.php:217 src/GatewayManager.php:235
+msgid "Pending LHV confirmation"
+msgstr "LHV kinnituse ootel"
+
+#: src/GatewayManager.php:307
 msgid "Settings"
 msgstr "Seaded"
 
-#: src/GatewayManager.php:273
+#: src/GatewayManager.php:308
 msgid "Documentation"
 msgstr "Dokumentatsioon"
 
-#: src/GatewayManager.php:274
+#: src/GatewayManager.php:309
 msgid "Support"
 msgstr "Klienditugi"
 
@@ -56,7 +60,11 @@ msgstr "Klienditugi"
 msgid "Shipping"
 msgstr "Tarne"
 
-#: src/WooCommerceOrderHandler.php:209
+#: src/WooCommerceOrderHandler.php:241
+msgid "You should receive an email from AS LHV Finance soon!"
+msgstr "Aitäh! AS LHV Finance saadab teile peagi e-kirja."
+
+#: src/WooCommerceOrderHandler.php:261
 msgid ""
 "Sorry, it appears that AS LHV Finance refused the contract. Please choose "
 "another payment method or contact support."
@@ -64,7 +72,7 @@ msgstr ""
 "Kahjuks keeldus AS LHV Finance järelmaksulepingust. Tellimuse sooritamiseks "
 "vali mõni teine maksemeetod või võta ühendust klienditoega."
 
-#: src/WooCommerceOrderHandler.php:227
+#: src/WooCommerceOrderHandler.php:279
 msgid ""
 "We were unable to process the order using LHV hire-purchase due to a "
 "technical error. Please contact the store support or use a different payment "
@@ -183,22 +191,6 @@ msgstr "LHV avalik võti"
 msgid "AS LHV Finance public key. You probably do not need to change this."
 msgstr "AS LHV Finance avalik võti. Tõenäoliselt ei ole vaja seda muuta."
 
-#: templates/admin-support.php:15
-msgid ""
-"Having trouble? Check out the documentation or get in touch - our support is "
-"happy to help!"
-msgstr ""
-"Probleemide korral vaata plugina dokumentatsiooni või võta klienditoega "
-"ühendust - aitame sind hea meelega!"
-
-#: templates/admin-support.php:19
-msgid "Read the docs"
-msgstr "Dokumentatsioon"
-
-#: templates/admin-support.php:22
-msgid "Contact support"
-msgstr "Klienditugi"
-
 #: woocommerce-lhv-hire-purchase.php:27
 msgid ""
 "You are running the development version of LHV hire-purchase which requires "
@@ -224,6 +216,19 @@ msgstr ""
 "LHV järelmaksumoodul vajab WooCommerce versiooni 3.0.0 või uuemat. Palun "
 "uuenda oma WooCommerce'i pluginat ja proovi uuesti. Enne uuendust tee "
 "kindlasti lehest varukoopia!"
+
+#~ msgid ""
+#~ "Having trouble? Check out the documentation or get in touch - our support "
+#~ "is happy to help!"
+#~ msgstr ""
+#~ "Probleemide korral vaata plugina dokumentatsiooni või võta klienditoega "
+#~ "ühendust - aitame sind hea meelega!"
+
+#~ msgid "Read the docs"
+#~ msgstr "Dokumentatsioon"
+
+#~ msgid "Contact support"
+#~ msgstr "Klienditugi"
 
 #~ msgid "LHV test mode"
 #~ msgstr "LHV testrežiim"
