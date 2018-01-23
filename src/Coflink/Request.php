@@ -117,11 +117,12 @@ class Request
             $productNode = $xml->addChild(self::XML_PRODUCT_NODE);
 
             foreach ($item as $fieldKey => $fieldValue) {
-                $productNode->addChild($fieldKey, $fieldValue);
+                $productNode->addChild($fieldKey, htmlspecialchars($fieldValue, ENT_XML1, 'UTF-8'));
             }
         }
 
         $xml = $xml->addChild(self::XML_VALID_TIME_NODE, $this->getValidToDtime());
+
         $dom = dom_import_simplexml($xml);
 
         return $dom->ownerDocument->saveXML($dom->ownerDocument->documentElement);
