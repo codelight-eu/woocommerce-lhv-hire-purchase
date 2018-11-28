@@ -98,7 +98,7 @@ class WooCommerceOrderHandler
         if (empty($taxRates)) {
             $itemRate = 0;
         } else {
-            $itemRate = array_shift($taxRates)['rate'];
+            $itemRate = round(array_shift($taxRates)['rate'], 2);
         }
 
         $price = $item->get_total() + $item->get_total_tax();
