@@ -3,7 +3,7 @@
  * Plugin Name:       WooCommerce LHV hire-purchase
  * Plugin URI:        https://github.com/codelight-eu/woocommerce-lhv-hire-purchase
  * Description:       WordPress and WooCommerce plugin for LHV Bank hire-purchase payment gateway.
- * Version:           1.1.1
+ * Version:           1.1.2
  * Author:            Codelight
  * Author URI:        https://codelight.eu/
  * License:           MIT
