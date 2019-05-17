@@ -101,7 +101,7 @@ class WooCommerceOrderHandler
             $itemRate = round(array_shift($taxRates)['rate'], 2);
         }
 
-        $price = $item->get_total() + $item->get_total_tax();
+        $price = round($item->get_total() + $item->get_total_tax(), 2);
         // Do not add items with zero price, as LHV cannot handle them properly
         if ($price <= 0) {
             return;
