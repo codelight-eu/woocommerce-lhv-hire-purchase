@@ -1,5 +1,5 @@
 === WooCommerce LHV hire-purchase ===
-Contributors:
+Contributors: indrek_k, codelight
 Tags: lhv, woocommerce, gateway
 Requires at least: 4.8
 Tested up to: 5.4.1
