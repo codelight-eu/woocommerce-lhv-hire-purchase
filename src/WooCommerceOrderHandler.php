@@ -79,9 +79,10 @@ class WooCommerceOrderHandler
         }
 
         return [
-            'result' => 'success',
-            'url'    => $request->getRequestUrl(),
-            'data'   => $fields,
+            'result'   => 'success',
+            'url'      => $request->getRequestUrl(),
+            'data'     => $fields,
+            'redirect' => false,
         ];
     }
 

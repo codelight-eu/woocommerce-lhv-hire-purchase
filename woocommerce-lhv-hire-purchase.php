@@ -1,14 +1,16 @@
 <?php
 /**
- * Plugin Name:       WooCommerce LHV hire-purchase
- * Plugin URI:        https://github.com/codelight-eu/woocommerce-lhv-hire-purchase
- * Description:       WordPress and WooCommerce plugin for LHV Bank hire-purchase payment gateway.
- * Version:           1.1.2
- * Author:            Codelight
- * Author URI:        https://codelight.eu/
- * License:           MIT
- * Text Domain:       lhv
- * Domain Path:       /languages
+ * Plugin Name:          WooCommerce LHV hire-purchase
+ * Plugin URI:           https://github.com/codelight-eu/woocommerce-lhv-hire-purchase
+ * Description:          WordPress and WooCommerce plugin for LHV Bank hire-purchase payment gateway.
+ * Version:              1.1.3
+ * Author:               Codelight
+ * Author URI:           https://codelight.eu/
+ * License:              MIT
+ * Text Domain:          lhv
+ * Domain Path:          /languages
+ * WC requires at least: 3.0
+ * WC tested up to:      4.2.0
  */
 
 if (!defined('WPINC')) {
@@ -47,6 +49,7 @@ function lhv_hire_purchase_init()
     // Run the plugin
     Codelight\LHV\GatewayManager::getInstance(__FILE__);
 }
+
 // Run the plugin after all plugins are loaded
 add_action('plugins_loaded', 'lhv_hire_purchase_init');
 
@@ -54,8 +57,8 @@ add_action('plugins_loaded', 'lhv_hire_purchase_init');
 /**
  * Display a notice in WP admin
  *
- * @param $type
- * @param $message
+ * @param      $type
+ * @param      $message
  * @param bool $displayOnSettingsPage
  */
 function lhv_admin_notice($type, $message)
