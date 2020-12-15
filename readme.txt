@@ -2,8 +2,8 @@
 Contributors: indrek_k, codelight
 Tags: lhv, woocommerce, gateway
 Requires at least: 4.8
-Tested up to: 5.4.1
-Stable tag: 1.1.3
+Tested up to: 5.5.3
+Stable tag: 1.1.4
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 

@@ -153,7 +153,7 @@ class GatewayManager
 
         $returnUrl = apply_filters(
             'lhv/hire-purchase/return-url',
-            add_query_arg(['lhv-hire-purchase-payment' => $order->get_id()], get_home_url()),
+            add_query_arg(['lhv-hire-purchase-payment' => $order->get_id()], trailingslashit(get_home_url())),
             $order
         );
 
