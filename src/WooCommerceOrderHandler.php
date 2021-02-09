@@ -133,7 +133,7 @@ class WooCommerceOrderHandler
             }
 
             if (!$sku) {
-                $sku = '#' . $item['product_id'] . ' ' . $item['name'];
+                $sku = '#' . $item['product_id'];
             }
 
             return $sku;
