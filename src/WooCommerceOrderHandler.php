@@ -129,21 +129,32 @@ class WooCommerceOrderHandler
             $sku     = '';
 
             if ($product) {
+
+                // Dont send SKU if characters over 50
+                $allowedlimit = 50;
                 $sku = $product->get_sku();
+
+                if(mb_strlen($sku)>$allowedlimit)
+                {
+                    $sku  = '';
+                }
+
+
+                
             }
 
             if (!$sku) {
-                $sku = '#' . $item['product_id'];
+                $sku     = '';
             }
 
             return $sku;
         }
 
         if (is_a($item, 'WC_Order_Item_Shipping')) {
-            return __('Shipping', 'lhv-hire-purchase') . ': ' . $item->get_name();
+            return $sku;
         }
 
-        return $item->get_name();
+        return $sku;
     }
 
     /**

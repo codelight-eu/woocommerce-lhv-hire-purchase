@@ -2,8 +2,8 @@
 Contributors: indrek_k, codelight
 Tags: lhv, woocommerce, gateway
 Requires at least: 4.8
-Tested up to: 5.6.1
-Stable tag: 1.1.5
+Tested up to: 6.8.0
+Stable tag: 1.1.6
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -30,6 +30,9 @@ WooCommerce LHV hire-purchase is maintained by [Codelight](https://codelight.eu)
 3. Use the WooCommerce->Settings->Checkout->LHV hire-purchase screen to configure the plugin
 
 == Changelog ==
+
+= 1.1.6 =
+* SKU validation
 
 = 1.1 =
 * Minor tweaks
